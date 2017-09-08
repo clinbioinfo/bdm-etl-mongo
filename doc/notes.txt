@@ -1,0 +1,15 @@
+Get start time
+Generate unique token for the execution
+Generate session_id
+Get list of .csv files
+For each .csv file
+  Parse file and for each row
+    if row is the header
+      parse the header and generate column-position-to-name lookup
+    Create a JSON object out or row using column-position-to-name lookup
+    Add study_code to the object
+    Add session_id to the object
+    Insert the JSON object as document into collection
+Get end time
+Create session JSON object that includes start time, end time, session_id, absolute path of the executable, username of invoker
+Insert object into session collection
